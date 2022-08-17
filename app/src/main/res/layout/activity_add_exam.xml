@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExam">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="32dp"
+        android:text="ADD EXAM"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="34dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/return_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="31dp"
+        android:layout_weight="1"
+        android:onClick="exam"
+        android:text="RETURN"
+        android:visibility="gone"
+        app:backgroundTint="#134CC3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/response" />
+
+    <TableLayout
+        android:id="@+id/add_table"
+        android:layout_width="337dp"
+        android:layout_height="413dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="10dip"
+                android:paddingBottom="0dp"
+                android:text="Exam Name:" />
+
+            <EditText
+                android:id="@+id/ename_edit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxWidth="50dip"
+                android:minWidth="50dip" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_height="50dp"
+                android:padding="10dip"
+                android:paddingBottom="0dp"
+                android:text="Date &amp; Time:" />
+
+            <EditText
+                android:id="@+id/date_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="10dip"
+                android:paddingBottom="0dp"
+                android:text="Location:" />
+
+            <EditText
+                android:id="@+id/location_edit"
+                android:layout_width="238dp"
+                android:layout_height="50dp"
+                android:maxWidth="50dip"
+                android:minWidth="150dip" />
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="411dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="addExam"
+            android:text="Add Exam"
+            app:backgroundTint="#BE2020" />
+
+        <Button
+            android:id="@+id/return_button"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="exam"
+            android:text="RETURN"
+            app:backgroundTint="#134CC3" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

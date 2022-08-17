@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.studenthub.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/addStudent"
+        android:name="com.example.studenthub.AddStudent"
+        android:label="activity_add_student"
+        tools:layout="@layout/activity_add_student" />
+    <activity
+        android:id="@+id/studentList"
+        android:name="com.example.studenthub.MainStudent"
+        android:label="activity_student_list"
+        tools:layout="@layout/activity_main_student" />
+    <activity
+        android:id="@+id/taskList"
+        android:name="com.example.studenthub.MainTask"
+        android:label="activity_task_list"
+        tools:layout="@layout/activity_main_task" />
+</navigation>

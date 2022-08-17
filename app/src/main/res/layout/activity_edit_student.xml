@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditStudent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:onClick="setImg"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:srcCompat="@mipmap/westernlogo" />
+
+            <TextView
+                android:id="@+id/response"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/return_button2"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="student"
+                android:text="RETURN"
+                android:visibility="gone"
+                app:backgroundTint="#134CC3" />
+
+            <TableLayout
+                android:id="@+id/edit_table"
+                android:layout_width="wrap_content"
+                android:layout_height="477dp"
+                android:layout_gravity="center">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="Student ID:" />
+
+                    <EditText
+                        android:id="@+id/SID_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="First Name:" />
+
+                    <EditText
+                        android:id="@+id/FName_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:minWidth="200dip" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="Last Name:" />
+
+                    <EditText
+                        android:id="@+id/LName_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:minWidth="50dip" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="Course Number:" />
+
+                    <EditText
+                        android:id="@+id/Course_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:minWidth="50dip" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="Gender:" />
+
+                    <RadioGroup
+                        android:id="@+id/genderGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:checked="true"
+                            android:text="Male"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:text="Female"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="Age:" />
+
+                    <NumberPicker
+                        android:id="@+id/numberPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:padding="10dip"
+                        android:paddingBottom="0dp"
+                        android:text="Address:" />
+
+                    <EditText
+                        android:id="@+id/Address_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="50dip"
+                        android:minWidth="50dip" />
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:onClick="showmap"
+                        app:backgroundTint="#50CA0D"
+                        android:text="SHOW MAP" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:onClick="exam"
+                        android:text="SHOW EXAM" />
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/navbar"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/return_button"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:onClick="student"
+                    android:text="RETURN"
+                    app:backgroundTint="#134CC3" />
+
+                <Button
+                    android:id="@+id/edit_button"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:onClick="updateFriend"
+                    android:text="UPDATE"
+                    android:textColor="#795548"
+                    app:backgroundTint="#ECDB0C" />
+
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:onClick="deleteFriend"
+                    android:text="Delete"
+                    app:backgroundTint="#BE2020" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
